@@ -15,25 +15,17 @@
 
 1. Description of the problem and a discussion of the background
 
-I want to consider the following situation: I am planning to open a restaurant for french cuisine with medium to high price range in Frankfurt am Main/ Germany. Frankfurt is a city with many different kinds of cuisine: local and international. I have been living here for almost 10 years and I noticed, that french cuisine is hardly available, atleast not in the quality I prefer it. Therefore my plan is to open a restaurant myself to fill the gap. In order to find the perfect place for my restaurant I will need to factor in some considerations:
+I want to consider the following situation: My friend approached me, since he wants to expand his cafe franchise to Frankfurt am Main/ Germany. Frankfurt is a city with many different kinds of cuisine: local and international and high frequency of business travelers and tourists, due to the closeness of the main airport and industry sector. Since he is not familiar with the city himself, he asked me to help him finding the perfect location. Therefore I will use clustering algorithms, geodata and population data to find the ideal district to open his new cafe.
 
-I need an area where...
-... people frequent restaurants
-... restaurants of a certain standard are located, so people who are willing to spend the money necessary for my restaurant will be available
-... people can get easily by means of public or private transportation
-... no or hardly any other french restaurant is already located
+2. Description of Data
 
-2. Description of the data and how it will be used to solve the problem
+The following Datasets have been used:
+  a) Street Directory: https://offenedaten.frankfurt.de/dataset/strassenverzeichnis-der-stadt-frankfurt-am-main
+  b) Demographic Information: https://offenedaten.frankfurt.de/dataset/stadtteilprofile-bevoelkerung
+  c) GeoData: https://offenedaten.frankfurt.de/dataset/wahlatlas-2015-geodaten/resource/84dff094-ab75-431f-8c64-39606672f1da
+  d) Foursquare API to find common venues in certain areas
 
-I want to use Foursquare data to locate an area to fullfill the requirements presented in the first part. I can solve the requirements like this:
-
- a) an area where people frequent restaurants
-    I will be looking for the density of restaurants in different areas of the city. I will use districts as substitute for area. Districts with a higher density of               restaurants will be considered better.
- b) restaurants of a certain standard are located
-    I will be looking for districts with higher rated restaurants.
- c) people can get easily by means of public or private transportation
-    Districts closer to the central public transportation system will be considered better - let's say districts close to the main station and three main subway stations
- d) competition
-    Districts with less french restaurants will be considered better
-
-I am going to give points to each district for each factor and choose the district with the highest overall points for my restaurant.
+I want to use the data to find:
+- densely populated districts close to the center and connected to public transportation
+- districts with not that many cafes and lots of hotels and restaurants (higher frequency of people)
+- districts with many people in the age group of 18 to 64 (higher amount of money)
